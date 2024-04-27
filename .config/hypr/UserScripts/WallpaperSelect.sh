@@ -9,7 +9,9 @@ wallDIR="$HOME/Pictures/wallpapers"
 
 # Transition config
 FPS=144
-TYPE="random"
+transitions=("wipe" "any" "outer" "wave")
+rand=$[$RANDOM % ${#transitions[@]}]
+TYPE=${transitions[$rand]}
 DURATION=1
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
@@ -23,6 +25,9 @@ fi
 PICS=($(ls "${wallDIR}" | grep -E ".jpg$|.jpeg$|.png$|.gif$"))
 RANDOM_PIC="${PICS[$((RANDOM % ${#PICS[@]}))]}"
 RANDOM_PIC_NAME="${#PICS[@]}. random"
+
+# Get current active monitor
+current_monitor=$(hyprctl -j activeworkspace | jq .monitor | tr -d '"')
 
 # Rofi command
 rofi_command="rofi -show -dmenu -config ~/.config/rofi/config-wallpaper.rasi"
@@ -67,7 +72,7 @@ main() {
   done
 
   if [[ $pic_index -ne -1 ]]; then
-    swww img -o DP-1 "${wallDIR}/${PICS[$pic_index]}" $SWWW_PARAMS
+    swww img -o $current_monitor "${wallDIR}/${PICS[$pic_index]}" $SWWW_PARAMS
   else
     echo "Image not found."
     exit 1
