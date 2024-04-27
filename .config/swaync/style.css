@@ -3,11 +3,11 @@
 @import '../../.cache/wal/colors-waybar.css';
 
 @define-color noti-border-color #f5bde6;
-@define-color noti-bg rgba(24, 25, 38, 0.7);
+@define-color noti-bg rgba(24, 25, 38, 0.9);
 @define-color noti-bg-alt #1e2030;
 @define-color noti-bg-hover #f5bde6;
 @define-color text-color #f5bde6;
-@define-color text-color-alt #c6a0f6;
+@define-color text-color-alt #f5bde6;
 @define-color text-color-disabled rgba(150, 150, 150, 0.8);
 
 * {

@@ -11,14 +11,11 @@ declare -A menu_options=(
   ["Lofi Girl ☕️🎶"]="https://play.streamafrica.net/lofiradio"
   ["Ghibli Music 🎻🎶"]="https://youtube.com/playlist?list=PLNi74S754EXbrzw-IzVhpeAaMISNrzfUy&si=rqnXCZU5xoFhxfOl"
   ["Anime OP Lofi ☕️🎶"]="https://www.youtube.com/playlist?list=PLl578ZPbYIlFcSxuka8Km37VgbUYUWI5p"
-  ["Video Game OST 🎮🎶"]="https://www.youtube.com/playlist?list=PLK5w70ndndYOm75Fdsc2169PXGU--qvjJ"
-  ["Anime OP Lofi x ☕️🎶"]=""
-  ["Top Youtube Music 2023 ☕️🎶"]="https://youtube.com/playlist?list=PLDIoUOhQQPlXr63I_vwF9GD8sAKh77dWU&si=y7qNeEVFNgA-XxKy"
-  ["Chillhop ☕️🎶"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
-  ["SmoothChill ☕️🎶"]="https://media-ssl.musicradio.com/SmoothChill"
-  ["Relaxing Music ☕️🎶"]="https://youtube.com/playlist?list=PLMIbmfP_9vb8BCxRoraJpoo4q1yMFg4CE"
-  ["Youtube Remix 📻🎶"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
-  ["Korean Drama OST 📻🎶"]="https://youtube.com/playlist?list=PLUge_o9AIFp4HuA-A3e3ZqENh63LuRRlQ"
+  ["Video Game 🎮🎶"]="https://www.youtube.com/playlist?list=PLK5w70ndndYOm75Fdsc2169PXGU--qvjJ"
+  ["Elden Rind 🗡️🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6OaT4dPnFIv_gcL2tqEQT4c"
+  ["Dark Souls 3 🗡️🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6M7UV1EBjAFA349aTyutIU4"
+  ["Hollow Knight ♞🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6NxghzG-7CxbMRu8UEja91b"
+  ["Persona 5 🃏🎶"]="https://www.youtube.com/playlist?list=OLAK5uy_nCEOviuThU9V0LgO4UVybwNc9qZb-SlIs"
 )
 
 # Function for displaying notifications

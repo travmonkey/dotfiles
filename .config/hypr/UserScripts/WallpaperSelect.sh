@@ -84,3 +84,5 @@ main
 
 sleep 0.5
 ${SCRIPTSDIR}/PywalSwww.sh
+sleep 0.2
+${SCRIPTSDIR}/RefreshNoWaybar.sh
