@@ -12,7 +12,7 @@ monitor_outputs=($(ls "$cache_dir"))
 ln_success=false
 
 # Get first valid monitor
-current_monitor=$(hyprctl -j monitors | jq -r '.[0].name')
+current_monitor=$(hyprctl -j monitors | jq -r '.[1].name')
 echo $current_monitor
 # Construct the full path to the cache file
 cache_file="$cache_dir$current_monitor"
@@ -28,11 +28,3 @@ if [ -f "$cache_file" ]; then
     fi
 fi
 
-# Check the flag before executing further commands
-if [ "$ln_success" = true ]; then
-    # execute pywal
-    # wal -i "$wallpaper_path"
-	echo 'about to execute wal'
-    # execute pywal skipping tty and terminal changes
-    wal -i "$wallpaper_path" -s -t &
-fi

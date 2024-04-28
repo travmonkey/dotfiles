@@ -12,7 +12,7 @@ declare -A menu_options=(
   ["Ghibli Music 🎻🎶"]="https://youtube.com/playlist?list=PLNi74S754EXbrzw-IzVhpeAaMISNrzfUy&si=rqnXCZU5xoFhxfOl"
   ["Anime OP Lofi ☕️🎶"]="https://www.youtube.com/playlist?list=PLl578ZPbYIlFcSxuka8Km37VgbUYUWI5p"
   ["Video Game 🎮🎶"]="https://www.youtube.com/playlist?list=PLK5w70ndndYOm75Fdsc2169PXGU--qvjJ"
-  ["Elden Rind 🗡️🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6OaT4dPnFIv_gcL2tqEQT4c"
+  ["Elden Ring 🗡️🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6OaT4dPnFIv_gcL2tqEQT4c"
   ["Dark Souls 3 🗡️🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6M7UV1EBjAFA349aTyutIU4"
   ["Hollow Knight ♞🎶"]="https://www.youtube.com/playlist?list=PLlHY6e7WCV6NxghzG-7CxbMRu8UEja91b"
   ["Persona 5 🃏🎶"]="https://www.youtube.com/playlist?list=OLAK5uy_nCEOviuThU9V0LgO4UVybwNc9qZb-SlIs"
