@@ -1,10 +1,6 @@
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* pywal-wlogout */
 
-/* Importing pywal colors */
-
-@import '../../.cache/wal/colors-waybar.css';
-
 window {
     font-family: Fira Code Medium;
     font-size: 16pt;
@@ -28,7 +24,7 @@ button:focus {
 }
 
 button:hover {
-    background-color: @color14; 
+    background-color: #f5bde6; 
     color: #1e1e2e;
     background-size: 50%;
     margin: 30px;

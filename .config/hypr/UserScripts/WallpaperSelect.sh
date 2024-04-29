@@ -3,6 +3,7 @@
 # This script for selecting wallpapers (SUPER W)
 
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
+echo $SCRIPTSDIR
 
 # WALLPAPERS PATH
 wallDIR="$HOME/Pictures/wallpapers"
@@ -46,6 +47,7 @@ menu() {
 }
 
 swww query || swww init
+
 
 main() {
   choice=$(menu | ${rofi_command})
