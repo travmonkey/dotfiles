@@ -16,11 +16,12 @@ if [[ $# -lt 1 ]] || [[ ! -d $1   ]]; then
 fi
 
 # Edit below to control the images transition
-export SWWW_TRANSITION_FPS=144
-export SWWW_TRANSITION_TYPE=simple
+DURATION=1
+BEZIER=".43,1.19,1,.4"
+
 
 # This controls (in seconds) when to switch to the next image
-INTERVAL=1800
+INTERVAL=5
 
 while true; do
 	find "$1" \
@@ -29,9 +30,15 @@ while true; do
 		done \
 		| sort -n | cut -d':' -f2- \
 		| while read -r img; do
-			swww img "$img" 
-			$pywal_refresh
-			sleep $INTERVAL
+        current_monitor=$(hyprctl -j activeworkspace | jq .monitor | tr -d '"')
+        FPS=144
+        transitions=("wipe" "any" "outer" "wave")
+        rand=$[$RANDOM % ${#transitions[@]}]
+        TYPE=${transitions[$rand]}
+        SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
+        swww img -o $current_monitor "$img" $SWWW_PARAMS
+        $pywal_refresh
+        sleep $INTERVAL
 			
 		done
 done
