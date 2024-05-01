@@ -14,21 +14,8 @@ configuration {
 
 }
 
-/* ---- Load pywal colors ---- */
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
-
 /* ---- Global Properties ---- */
-* {
-
-    background-alt:              @selected-active-background; // Buttons background
-    selected:                    @selected-normal-background; // Button selected
-    active:                      @selected-urgent-background; // Window activated
-    urgent:                      @selected-normal-background; // When hovering the activated window (maybe more?)
-
-    text-selected:               @background;
-    text-color:                  @foreground;
-    border-color:                @selected;
-}
+@import "~/.config/rofi/colors/catppuccin.rasi"
 
 // Main //
 /* ---- Window ---- */
@@ -54,7 +41,7 @@ mainbox {
     enabled:                     true;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
-    background-color:            transparent;
+    background-color:            @background;
 }
 
 /* ---- Inputbar ---- */
@@ -75,7 +62,7 @@ entry {
     expand:                      true;
     padding:                     12px 16px;
     border-radius:               10px;
-    background-color:            @background-alt;
+    background-color:            @background;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "   CTRL Del - Cliphist del || Alt Del - cliphist wipe"; // << Search symbol
