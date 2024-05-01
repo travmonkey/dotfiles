@@ -1,0 +1,12 @@
+* {
+    text-selected:               @background;
+    text-color:                  @foreground;
+    border-color:                @selected;
+
+    background:     #181926;
+    background-alt: #1e2030;
+    foreground:     #c6a0f6;
+    selected:       #f5bde6;
+    active:         #f5a97f;
+    urgent:         #a6da95;
+}
