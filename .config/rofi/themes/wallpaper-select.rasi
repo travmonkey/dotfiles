@@ -14,22 +14,9 @@ configuration {
 }
 
 /* ---- Load pywal colors ---- */
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
 
 /* ---- Global Properties ---- */
-* {
-
-    background-alt:              @selected-active-background; // Buttons background
-    selected:                    @selected-normal-background; // Button selected
-    active:                      @selected-urgent-background; // Window activated
-    urgent:                      @selected-normal-background; // When hovering the activated window (maybe more?)
-
-    text-selected:               @background;
-    text-color:                  @foreground;
-    border-color:                @selected;
-
-}
-
+@import "~/.config/rofi/colors/catppuccin.rasi"
 
 /* ---- Window ---- */
 window {
@@ -45,7 +32,7 @@ window {
     anchor:                      center;
 
     // Style Values
-    width:                       20%;
+    width:                       600px;
     background-color:            #00000088;
 }
 
@@ -53,13 +40,13 @@ window {
 mainbox {
     enabled:                     true;
     children:                    [ "inputbar", "listview" ];
-    background-color:            transparent;
+    background-color:            @background;
 }
 
 /* ---- Inputbar ---- */
 inputbar {
     enabled:                     true;
-    padding:                     60px 0px 60px 150px;
+    padding:                     60px 0px 60px 115px;
     margin:                      20px;
     background-color:            transparent;
     border-radius:               25px;
