@@ -31,7 +31,7 @@ RANDOM_PIC_NAME="${#PICS[@]}. random"
 current_monitor=$(hyprctl -j activeworkspace | jq .monitor | tr -d '"')
 
 # Rofi command
-rofi_command="rofi -show -dmenu -config ~/.config/rofi/config-wallpaper.rasi"
+rofi_command="rofi -show -dmenu -config ~/.config/rofi/themes/wallpaper-select.rasi"
 
 menu() {
   for i in "${!PICS[@]}"; do

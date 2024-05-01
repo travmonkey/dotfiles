@@ -12,7 +12,7 @@ monitor_outputs=($(ls "$cache_dir"))
 ln_success=false
 
 # Get first valid monitor
-current_monitor=$(hyprctl -j monitors | jq -r '.[1].name')
+current_monitor=$(hyprctl -j activeworkspace | jq .monitor | tr -d '"')
 echo $current_monitor
 # Construct the full path to the cache file
 cache_file="$cache_dir$current_monitor"
@@ -23,7 +23,7 @@ if [ -f "$cache_file" ]; then
     wallpaper_path=$(cat "$cache_file")
     echo $wallpaper_path
     # Copy the wallpaper to the location Rofi can access
-    if ln -sf "$wallpaper_path" "$HOME/.config/rofi/.current_wallpaper"; then
+    if ln -sf "$wallpaper_path" "$HOME/.current_wallpaper"; then
         ln_success=true  # Set the flag to true upon successful execution
     fi
 fi
