@@ -12,7 +12,7 @@ monitor_outputs=($(ls "$cache_dir"))
 ln_success=false
 
 # Get first valid monitor
-current_monitor=$(hyprctl -j activeworkspace | jq .monitor | tr -d '"')
+current_monitor="DP-1"
 echo $current_monitor
 # Construct the full path to the cache file
 cache_file="$cache_dir$current_monitor"

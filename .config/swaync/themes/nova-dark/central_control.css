@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @define-color text            @muave;
 @define-color background-alt  alpha(@mantle, 1);
 @define-color selected        @pink;
@@ -287,3 +288,4 @@ progressbar {
     border-radius: 10px;
     color: @selected;
 } 
+/* stylelint enable */

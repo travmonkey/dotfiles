@@ -3,7 +3,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="custom"
 
 plugins=( 
     git
@@ -12,22 +12,37 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+# source ~/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+# Neovim
+alias vim ="nvim"
+alias vi="nvim"
+alias v="nvim"
+
+# LS related
+alias la="ls -lta"
+alias lr="ls -ltr"
+alias l="ls"
+
 # New line for input
-prompt_end() {
-  if [[ -n $CURRENT_BG ]]; then
-      print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
-  else
-      print -n "%{%k%}"
-  fi
+# prompt_end() {
+#   if [[ -n $CURRENT_BG ]]; then
+#       print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+#   else
+#       print -n "%{%k%}"
+#   fi
+#
+#   print -n "%{%f%}"
+#   CURRENT_BG='' 
+#
+#   #Adds the new line and ➜ as the start character.
+#   printf "\n ➜ $";
+# }
 
-  print -n "%{%f%}"
-  CURRENT_BG='' 
-
-  #Adds the new line and ➜ as the start character.
-  printf "\n ➜ $";
-}
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # Login to start Hyprland
 if [ "$(tty)" = "/dev/tty2" ]
@@ -35,31 +50,11 @@ then
   Hyprland
 fi
 
-# Adding Directories to PATH
-# Check archlinux plugin commands here
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/archlinux
-
-
 # Display Pokemon-colorscripts
-# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
 pokemon-colorscripts --no-title -s -r
-
-### From this line is for pywal-colors
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-# Not supported in the "fish" shell.
-#(cat ~/.cache/wal/sequences &)
-
-# Alternative (blocks terminal for 0-3ms)
-#cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-#source ~/.cache/wal/colors-tty.sh
 
 # Created by SPICETIFY
 export PATH=$PATH:/home/travis/.spicetify
 
-# Changing zsh auto suggestions color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+# Use keyword 'config' to manage the git for .configs
 alias config='/usr/bin/git --git-dir=/home/travis/.cfg/ --work-tree=/home/travis'

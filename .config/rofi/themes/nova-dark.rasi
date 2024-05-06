@@ -10,9 +10,10 @@ configuration {
     display-run:                "Run";
     display-filebrowser:        "Files";
     display-window:             "Windows";
+    hover-select:               true;
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
-    font:                        "JetBrains Mono Nerd Font 10";
+    font:                        "Monofur Nerd Font 12";
     me-select-entry:            "MouseSecondary";
     me-accept-entry:            "MousePrimary";
 }

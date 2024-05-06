@@ -1,7 +1,9 @@
-@define-color text            @foreground;
-@define-color background-alt  @color1;
+@define-color text            @muave;
+@define-color background-alt  alpha(@mantle, 1);
 @define-color selected        @pink;
-@define-color hover           @color5;
+@define-color selected-text   @mantle;
+@define-color hover           alpha(@selected, 1);
+@define-color hover-text      @mantle;
 @define-color urgent          @color2;
 
 * {
@@ -28,7 +30,7 @@
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background: alpha(@background, .55);
+  background: alpha(@background-alt, 1);
   box-shadow: 0 0 8px 0 rgba(0,0,0,.6);
   border: 1px solid @selected;
   border-radius: 24px;

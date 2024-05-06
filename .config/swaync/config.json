@@ -68,7 +68,9 @@
     },
     "volume": {
       "label": "󰕾",
-      "show-per-app": true
+      "show-per-app": true,
+      "show-per-app-label": true,
+      "show-per-app-icon": true
     },
     "buttons-grid": {
       "actions": [

@@ -77,6 +77,6 @@ keymap("n", "<leader>gt", "<Cmd>lua Lazygit_toggle()<CR>", opts)
 -- */ Comments -- /*
 -----------------------------
 
-keymap("n", "<leader>_", "gcc", opts)
+keymap("n", "<leader>/", "gcc", opts)
 
 -----------------------------

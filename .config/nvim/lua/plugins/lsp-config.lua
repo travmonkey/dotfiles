@@ -33,12 +33,15 @@ return {
 			lspconfig.bashls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.sorbet.setup({
+			lspconfig.ruby_lsp.setup({
 				capabilities = capabilities,
 			})
-      lspconfig.cssls.setup({
-        capabilities = capabilities,
-      })
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jsonls.setup({
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

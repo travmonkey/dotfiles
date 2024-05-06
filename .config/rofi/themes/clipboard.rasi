@@ -10,7 +10,7 @@ configuration {
     me-accept-entry:             "MousePrimary";
     window-format:               "{w} · {c} · {t}";
 	dpi:						 1;
-    font:                        "JetBrainsMono Nerd Font 10";
+    font:                        "Monofur Nerd Font 12";
 
 }
 

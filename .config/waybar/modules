@@ -562,7 +562,7 @@
     
 // NOTE:! This is only for Arch and Arch Based Distros  
 "custom/updater":{
-    "format": " {}",
+    "format": "  {}",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
     "interval": 15,
