@@ -25,6 +25,10 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<leader>n", "<cmd>set nu!<CR>", opts)
 keymap("n", "<leader>rn", ":set rnu!<CR>", opts)
 
+-- Use JK in insert/terminal mode to trigger Escape
+keymap("i", "jk", "<Esc>", opts)
+keymap("t", "jk", "<C-\\><C-n><Cmd>ToggleTerm<CR>", opts)
+
 -----------------------------
 --  */ -- bufferline -- /*
 -----------------------------
@@ -70,13 +74,13 @@ keymap({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 -----------------------------
 
 keymap("t", "<Esc>", "<C-\\><C-n>", opts)
-keymap("n", "<leader>t", "<Cmd>ToggleTerm<CR>", opts)
+keymap("n", "<leader>t", "<Cmd>ToggleTerm<CR>i", opts)
 keymap("n", "<leader>gt", "<Cmd>lua Lazygit_toggle()<CR>", opts)
 
 -----------------------------
 -- */ Comments -- /*
 -----------------------------
 
-keymap("n", "<leader>/", "gcc", opts)
+keymap("n", "<leader>_", "gcc", opts)
 
 -----------------------------

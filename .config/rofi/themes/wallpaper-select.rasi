@@ -13,8 +13,6 @@ configuration {
 	dpi:						 1;
 }
 
-/* ---- Load pywal colors ---- */
-
 /* ---- Global Properties ---- */
 @import "~/.config/rofi/colors/catppuccin.rasi"
 

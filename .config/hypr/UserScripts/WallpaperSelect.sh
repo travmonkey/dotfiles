@@ -33,6 +33,7 @@ current_monitor=$(hyprctl -j activeworkspace | jq .monitor | tr -d '"')
 # Rofi command
 rofi_command="rofi -show -dmenu -config ~/.config/rofi/themes/wallpaper-select.rasi"
 
+
 menu() {
   for i in "${!PICS[@]}"; do
     # Displaying .gif to indicate animated images
@@ -51,6 +52,7 @@ swww query || swww init
 
 main() {
   choice=$(menu | ${rofi_command})
+  echo $choice
 
   # No choice case
   if [[ -z $choice ]]; then
