@@ -1,17 +1,19 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('config.settings')
-require('config.keymaps')
-require("lazy").setup('plugins')
+-- Must set leader before loading lazy
+-- Required to be able to call pluing functions in my keybinds file
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
+require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }) -- Load all plugins from plugins folder

@@ -11,10 +11,6 @@ return {
       direction = "float",
 		})
 
-    function Set_neotree_terminal()
-      local neotree = require "neo-tree"
-      local nvimtree_view = require "neo-tree.view"
-    end
 		function Lazygit_toggle()
 			lazygit:toggle()
 		end
