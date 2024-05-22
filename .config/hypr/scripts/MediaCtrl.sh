@@ -31,11 +31,11 @@ stop_playback() {
 # Display notification with song information
 show_music_notification() {
     status=$(playerctl status)
-    if [[ "$status" == "Playing" ]]; then
+    if [[ "$status" == "Paused" ]]; then
         song_title=$(playerctl metadata title)
         song_artist=$(playerctl metadata artist)
         notify-send -e -u low -i "$music_icon" "Now Playing:" "$song_title\nby $song_artist"
-    elif [[ "$status" == "Paused" ]]; then
+    elif [[ "$status" == "Playing" ]]; then
         notify-send -e -u low -i "$music_icon" "Playback Paused"
     fi
 }
