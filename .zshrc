@@ -18,14 +18,19 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 # Neovim
-alias vim ="nvim"
+alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
-# LS related
-alias la="ls -lta"
-alias lr="ls -ltr"
-alias l="ls"
+# eza instead of ls related
+alias lr="eza -l --git --no-filesize --icons=always --no-time"
+alias lt="eza -l --git --no-filesize --icons=always --no-time --tree --level=2"
+alias lta="eza -l --git --no-filesize --icons=always --no-time --tree --level=2 -all"
+alias ltt="eza -l --git --no-filesize --icons=always --no-time --tree --level=3"
+alias ltta="eza -l --git --no-filesize --icons=always --no-time --tree --level=3 -all"
+alias ls="eza --git"
+alias la="eza -l --git --no-filesize --icons=always --no-time --all"
+
 
 # New line for input
 # prompt_end() {
@@ -58,3 +63,8 @@ export PATH=$PATH:/home/travis/.spicetify
 
 # Use keyword 'config' to manage the git for .configs
 alias config='/usr/bin/git --git-dir=/home/travis/.cfg/ --work-tree=/home/travis'
+
+# Seup fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+

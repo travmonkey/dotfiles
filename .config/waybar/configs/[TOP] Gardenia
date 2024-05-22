@@ -24,7 +24,7 @@
 	  
 "modules-center": ["hyprland/workspaces#kanji"], 
 	
-"modules-right": ["idle_inhibitor","custom/updater", "keyboard-state", "group/motherboard", "pulseaudio#gar","pulseaudio#microphone", "tray","custom/swaync", "custom/power"],
+"modules-right": ["idle_inhibitor","custom/updater", "group/motherboard", "pulseaudio#gar","pulseaudio#microphone", "tray","custom/swaync", "custom/power"],
 
 
 // M O D U L E S //
