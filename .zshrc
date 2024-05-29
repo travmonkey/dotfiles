@@ -16,6 +16,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Environemnt Variables
+export PICO_SDK_PATH=/home/travis/pico-sdk
+# Created by SPICETIFY
+export PATH=$PATH:/home/travis/.spicetify
+
 # Aliases
 # Neovim
 alias vim="nvim"
@@ -50,16 +55,13 @@ alias la="eza -l --git --no-filesize --icons=always --no-time --all"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # Login to start Hyprland
-if [ "$(tty)" = "/dev/tty2" ]
+if [[ "$(tty)" == "/dev/tty1" ]]
 then
   Hyprland
 fi
 
 # Display Pokemon-colorscripts
 pokemon-colorscripts --no-title -s -r
-
-# Created by SPICETIFY
-export PATH=$PATH:/home/travis/.spicetify
 
 # Use keyword 'config' to manage the git for .configs
 alias config='/usr/bin/git --git-dir=/home/travis/.cfg/ --work-tree=/home/travis'
