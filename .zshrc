@@ -16,6 +16,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source /opt/asdf-vm/asdf.sh
+
 # Environemnt Variables
 export PICO_SDK_PATH=/home/travis/pico-sdk
 # Created by SPICETIFY

@@ -309,8 +309,8 @@
     "capslock":"󰪛 {icon}",
         }, 
     "format-icons": {
-      "locked": "",
-      "unlocked": ""
+      "locked": " ",
+      "unlocked": " "
               },
 },
     
