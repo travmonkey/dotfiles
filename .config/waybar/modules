@@ -84,9 +84,9 @@
     "all-outputs": false,
     "format": "{icon}",
     "persistent-workspaces": {
+      "HDMI-A-1": [1, 2, 3, 4, 5],
       "DP-1": [11, 12, 13, 14, 15],
       "DP-2": [21, 22, 23, 24, 25],
-      "HDMI-A-1": [1, 2, 3, 4, 5],
       },
     "format-icons": {
       "1": "一",
@@ -142,7 +142,6 @@
       "cpu",
       "memory",
       "temperature",
-      "disk",
       ]	
 },
   
