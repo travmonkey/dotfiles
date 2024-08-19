@@ -16,8 +16,8 @@
 "fixed-center": true,
 "ipc": true,
 "margin-top": 5,
-"margin-right": 5,
-"margin-left": 5,
+"margin-right": 8,
+"margin-left": 8,
 //"margin-bottom": 5,
 	
 "modules-left": ["clock#gar", "custom/playerctl", "hyprland/window#gar"],

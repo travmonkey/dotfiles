@@ -5,12 +5,12 @@
 @define-color bgcolor #222436;  /* background color */
 @define-color alert   #df3320;
 
-@define-color accent1 #ed8796;
-@define-color accent2 #a6da95;
-@define-color accent3 #f5a97f;
-@define-color accent4 #c6a0f6;
-@define-color accent5 #8aadf4;
-@define-color accent6 #8bd5ca;
+@define-color accent1 #d65d0e;
+@define-color accent2 #689d6a;
+@define-color accent3 #b16286;
+@define-color accent4 #98971a;
+@define-color accent5 #cc241d;
+@define-color accent6 #458588;
 
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 /* Translucent */
@@ -32,10 +32,10 @@ window#waybar {
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 10px;
+    border-radius: 0px;
     border-style: solid;
     border-width: 1px;
-    border-color: #f5bde6;
+    border-color: #d65d0e;
 }
 
 window#waybar.hidden {
@@ -65,7 +65,7 @@ tooltip label{
 }
 
 #workspaces button {
-    background-color: #7dc4e4;
+    background-color: #83a598;
     color: #181926; 
     box-shadow: none;
     text-shadow: none;
@@ -84,7 +84,7 @@ tooltip label{
 }
 
 #workspaces button.active {
-    background-color: #f5bde6;
+    background-color: #d3869b;
     color: #181926;
     padding-left: 14px;
     padding-right: 14px;
@@ -92,8 +92,8 @@ tooltip label{
 }
 
 #workspaces button:hover {
-    background-color: rgba(245, 189, 230, 0.7);
-    color: #181926;
+    background-color: rgba(215,153,33, 0.7);
+    color: #282828;
 }
 
 #workspaces button.focused {
