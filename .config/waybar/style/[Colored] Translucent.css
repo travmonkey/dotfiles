@@ -28,7 +28,7 @@ padding: 1px;
 }
 
 window#waybar {
-    background-color: rgba(30,32,48,0.7);
+    background-color: rgba(50,48,47,0.9);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
